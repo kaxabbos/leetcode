@@ -20,6 +20,7 @@ public class M5_LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
+        System.out.println(longestPalindrome("abb"));
         System.out.println(longestPalindrome("babad"));
         System.out.println(longestPalindrome("caaaaa"));
         System.out.println(longestPalindrome("cbbd"));
