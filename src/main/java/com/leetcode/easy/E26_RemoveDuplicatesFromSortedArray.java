@@ -1,6 +1,5 @@
 package main.java.com.leetcode.easy;
 
-import java.util.Arrays;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -19,6 +18,6 @@ public class E26_RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
         System.out.println(removeDuplicates(new int[]{1, 1, 2}));
         System.out.println(removeDuplicates(new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}));
-        System.out.println(removeDuplicates(new int[]{-3,-1,0,0,0,3,3}));
+        System.out.println(removeDuplicates(new int[]{-3, -1, 0, 0, 0, 3, 3}));
     }
 }
