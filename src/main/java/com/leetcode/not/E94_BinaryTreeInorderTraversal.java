@@ -1,7 +1,6 @@
 package main.java.com.leetcode.not;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class E94_BinaryTreeInorderTraversal {
