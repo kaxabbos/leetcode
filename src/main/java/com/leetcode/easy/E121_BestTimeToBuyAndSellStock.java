@@ -1,4 +1,4 @@
-package main.java.com.leetcode.not;
+package main.java.com.leetcode.easy;
 
 public class E121_BestTimeToBuyAndSellStock {
     public static int maxProfit(int[] prices) {
