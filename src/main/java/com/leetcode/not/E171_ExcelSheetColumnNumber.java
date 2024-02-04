@@ -1,31 +1,28 @@
 package main.java.com.leetcode.not;
 
-import java.util.Objects;
-
 public class E171_ExcelSheetColumnNumber {
-    static String[] strings = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-    static String[] ints = "1234567891011121314151617181920212223242526".split("");
 
     static public int titleToNumber(String columnTitle) {
         int res = 0;
 
-        String[] temp = columnTitle.split("");
+        columnTitle = new StringBuilder(columnTitle).reverse().toString();
 
-        for (int i = 0; i < temp.length; i++) {
-            for (int j = 0; j < strings.length; j++) {
-                if (Objects.equals(strings[j], temp[i])) {
-                    res += Integer.parseInt(ints[j]) + (25 * i);
-                    break;
-                }
-            }
+        for (int i = 0; i < columnTitle.length(); i++) {
+            int temp = columnTitle.charAt(i) - 64;
+            res += temp + (25 * i * temp);
         }
+
 
         return res;
     }
 
     public static void main(String[] args) {
-        System.out.println(titleToNumber("A"));
-        System.out.println(titleToNumber("AB"));
-        System.out.println(titleToNumber("ZY"));
+//        System.out.println((int)'A'-64);
+
+        System.out.println(titleToNumber("A") + " - 1");
+        System.out.println(titleToNumber("AB") + " - 28");
+        System.out.println(titleToNumber("ZY") + " - 701");
+        System.out.println(titleToNumber("FXSHRXW"));
+        System.out.println(2147483647);
     }
 }

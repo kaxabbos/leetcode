@@ -4,9 +4,19 @@ import java.util.Arrays;
 
 public class E338_CountingBits {
     static public int[] countBits(int n) {
-        String[] strings = Integer.toString(n, 2).split("");
-        System.out.println(Arrays.toString(strings));
-        return new int[]{1};
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i <= n; i++) {
+            System.out.println(Integer.toString(i, 2));
+            builder.insert(i, Arrays.stream(Integer.toString(i, 2).split("")).reduce(0, (integer, s) -> {
+                if (s.equals("1")) return integer + 1;
+                return integer;
+            }, Integer::sum));
+        }
+        int[] res = new int[builder.length()];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = builder.charAt(i) - 48;
+        }
+        return res;
     }
 
     public static void main(String[] args) {
