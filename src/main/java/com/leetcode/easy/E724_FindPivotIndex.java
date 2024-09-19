@@ -1,4 +1,4 @@
-package main.java.com.leetcode.not;
+package main.java.com.leetcode.easy;
 
 public class E724_FindPivotIndex {
     static public int pivotIndex(int[] nums) {
